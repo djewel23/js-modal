@@ -28,3 +28,10 @@ closeModalBtn.addEventListener('click', closeModal);
 
 // Hide modal window when click occurs on overlay
 modalOverlay.addEventListener('click', closeModal);
+
+// Hide modal window when ESC is pressed down
+document.addEventListener('keydown', function(event){
+  if (event.key === 'Escape' && !modalWindow.classList.contains('hidden')){
+    closeModal();
+  };
+});
